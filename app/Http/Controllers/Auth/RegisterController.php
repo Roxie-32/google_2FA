@@ -24,8 +24,7 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers {
-        // change the name of the name of the trait's method in this class
-        // so it does not clash with our own register method
+         // We are doing this so the predefined register method does not clash with this one we just defined.
            register as registration;
        }
 
@@ -114,4 +113,6 @@ class RegisterController extends Controller
           // Call the default laravel authentication
           return $this->registration($request);
       }
+
+      
 }

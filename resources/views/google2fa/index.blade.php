@@ -2,10 +2,11 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row justify-content-center align-items-center " style="height: 70vh;S">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+                <div class="panel-heading font-weight-bold">Register</div>
+                <hr>
                 @if($errors->any())
                     <b style="color: red">{{$errors->first()}}</b>
 
@@ -16,7 +17,9 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
+                            <p>Please enter the  <strong>OTP</strong> generated on your Authenticator App. <br> Ensure you submit the current one because it refreshes every 30 seconds.</p>
                             <label for="one_time_password" class="col-md-4 control-label">One Time Password</label>
+
 
                             <div class="col-md-6">
                                 <input id="one_time_password" type="number" class="form-control" name="one_time_password" required autofocus>

@@ -26,3 +26,8 @@ Route::get('/complete-registration', [App\Http\Controllers\Auth\RegisterControll
 Route::post('/2fa', function () {
     return view('/home');
 })->name('2fa')->middleware('2fa');
+
+
+
+
+
